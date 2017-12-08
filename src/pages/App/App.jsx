@@ -1,17 +1,15 @@
 import React, { Component } from 'react';
-import {Link,Switch, Route } from 'react-router-dom';
+import {Link, Switch, Route } from 'react-router-dom';
 import './App.css';
 import Catalog from '../../components/Catalog/Catalog';
 import Checkout from '../../components/Checkout/Checkout';
 import Confirmation from '../../components/Confirmation/Confirmation';
-
+import NavBar from '../../components/NavBar/NavBar';
 class App extends Component {
   render() {
     return (
       <div>
-        <header>
-          HELLO
-          </header>
+       <NavBar/>
         <Switch>
           <Route exact path="/" render={() => <Catalog/>} />
           <Route path='/checkout' render={() => <Checkout/>} />
